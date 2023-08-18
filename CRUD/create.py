@@ -89,7 +89,7 @@ if __name__ == "__main__":
     connection = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="engprod25", #Se não houver senha no BD do MySQL, utiliza-se password = ""
+        password="", #Se não houver senha no BD do MySQL, utiliza-se password = ""
         database="empresa_bd"
     )
     
