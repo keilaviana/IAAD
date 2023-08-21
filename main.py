@@ -1,5 +1,5 @@
 import streamlit as st
-#from CRUD import create, read, update, delete
+from CRUD import create as c
 
 st.set_page_config(
     page_title="Página Inicial",
@@ -16,10 +16,10 @@ if selected_option == "Página Inicial": #Essa página ta meio borocoxo, pensei 
     st.title("Página Inicial")
     st.write("Uma abordagem aliando a implementação das operações CRUD, do MySQL, com o Streamlit.")
 elif selected_option == "Create":
-    create()
-elif selected_option == "Read":
-    read()
-elif selected_option == "Update":
-    update()
-elif selected_option == "Delete":
-    delete()
+    c.main()
+# elif selected_option == "Read": #precisa ser ajustado conforme implementação do arquivo importado
+#     read()
+# elif selected_option == "Update":
+#     update()
+# elif selected_option == "Delete":
+#     delete()
