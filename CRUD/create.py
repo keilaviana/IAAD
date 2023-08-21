@@ -42,7 +42,12 @@ def dnumeros(connection):
 
 def main():
     build_header()
-
+    connection = mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password="engprod25", #Se não houver senha no BD do MySQL, utiliza-se password = ""
+        database="empresa_bd"
+    )
     st.subheader("Selecione uma tabela do esquema para inserir dados:")
     select = st.radio("", ("Funcionário", "Departamento", "Dependentes"))
     
@@ -86,11 +91,4 @@ def main():
             insert_dependentes(connection, fcpf, nome_dependente, sexo, datanasc, parentesco)
 
 if __name__ == "__main__":
-    connection = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="engprod25", #Se não houver senha no BD do MySQL, utiliza-se password = ""
-        database="empresa_bd"
-    )
-    
     main()
