@@ -1,0 +1,29 @@
+import streamlit as st
+import create as c #pode colocar uma pasta 'pages' e importar dela
+import read as r
+# import update as u
+# import delete as d
+
+st.set_page_config(
+    page_title="#IAAD",
+    page_icon="🗂️",
+    layout="wide"
+)
+
+st.sidebar.title("Menu")
+
+menu_options = ["🎲Página Inicial", "📝Create", "🔍Read", "🔃Update", "📂Delete"]
+selected_option = st.sidebar.selectbox("Selecione uma operação CRUD:", menu_options)
+
+if selected_option == "Página Inicial":
+    st.title("🎲Página Inicial")
+    st.write("Este projeto consiste na implementação das operações CRUD, do MySQL, aliada ao Streamlit.")
+    st.write("Integrantes: Caio Farias, Keila Viana, Leonardo Antônio e Raquel Silva.")
+elif selected_option == "📝Create":
+    c.main()
+elif selected_option == "🔍Read":
+    r.main()
+# elif selected_option == "🔃Update":
+#     u.update()
+# elif selected_option == "📂Delete":
+#     d.delete()
