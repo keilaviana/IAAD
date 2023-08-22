@@ -1,8 +1,5 @@
 import streamlit as st
-import create as c #pode colocar uma pasta 'pages' e importar dela
-import read as r
-# import update as u
-# import delete as d
+from CRUD import create as c, read as r
 
 st.set_page_config(
     page_title="#IAAD",
@@ -24,6 +21,6 @@ elif selected_option == "📝Create":
 elif selected_option == "🔍Read":
     r.main()
 # elif selected_option == "🔃Update":
-#     u.update()
+#     u.main()
 # elif selected_option == "📂Delete":
-#     d.delete()
+#     d.main()
