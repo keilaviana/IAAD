@@ -58,7 +58,7 @@ def main():
     connection = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="raquel", #Se não houver senha no BD do MySQL, utiliza-se password = ""
+        password="", #Se não houver senha no BD do MySQL, utiliza-se password = ""
         database="empresa_bd"
     )
     cursor = connection.cursor()
